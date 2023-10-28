@@ -1,0 +1,84 @@
+# --------------------------------------------------------------------------------
+# Copyright (c) 2023 John Woo
+#
+# TelServ (TelnetServer)
+# 
+# This file is part of the TelServ project. For full license information, see the
+# LICENSE.md file at the root of the source code directory
+# --------------------------------------------------------------------------------
+
+from enum import Enum
+
+class TelnetCommands(Enum):
+    SE = 240
+    NOP = 241
+    DATA_MARK = 242
+    BREAK = 243
+    INTERRUPT_PROCESS = 244
+    ABORT_OUTPUT = 245
+    ARE_YOU_THERE = 246
+    ERASE_CHARACTER = 247
+    ERASE_LINE = 248
+    GO_AHEAD = 249
+    SB = 250
+    WILL = 251
+    WONT = 252
+    DO = 253
+    DONT = 254
+    IAC = 255
+
+class TelnetOptions(Enum):
+    BINARY_TRANSMISSION = 0
+    ECHO = 1
+    RECONNECTION = 2
+    SUPPRESS_GO_AHEAD = 3
+    APPROX_MESSAGE_SIZE_NEGOTIATION = 4
+    STATUS = 5
+    TIMING_MARK = 6
+    REMOTE_CONTROLLED_TRANS_AND_ECHO = 7
+    OUTPUT_LINE_WIDTH = 8
+    OUTPUT_PAGE_SIZE = 9
+    OUTPUT_CARRIAGE_RETURN_DISPOSITION = 10
+    OUTPUT_HORIZONTAL_TAB_STOPS = 11
+    OUTPUT_HORIZONTAL_TAB_DISPOSITION = 12
+    OUTPUT_FORMFEED_DISPOSITION = 13
+    OUTPUT_VERTICAL_TABSTOPS = 14
+    OUTPUT_VERTICAL_TAB_DISPOSITION = 15
+    OUTPUT_LINEFEED_DISPOSITION = 16
+    EXTENDED_ASCII = 17
+    LOGOUT = 18
+    BYTE_MACRO = 19
+    DATA_ENTRY_TERMINAL = 20
+    SUPDUP = 21
+    SUPDUP_OUTPUT = 22
+    SEND_LOCATION = 23
+    TERMINAL_TYPE = 24
+    END_OF_RECORD = 25
+    TACACS_USER_IDENTIFICATION = 26
+    OUTPUT_MARKING = 27
+    TERMINAL_LOCATION_NUMBER = 28
+    TELNET_3270_REGIME = 29
+    X3_PAD = 30
+    NEGOTIATE_ABOUT_WINDOW_SIZE = 31
+    TERMINAL_SPEED = 32
+    REMOTE_FLOW_CONTROL = 33
+    LINEMODE = 34
+    X_DISPLAY_LOCATION = 35
+    ENVIRONMENT_OPTION = 36
+    AUTHENTICATION_OPTION = 37
+    ENCRYPTION_OPTION = 38
+    NEW_ENVIRONMENT_OPTION = 39
+    TN3270E = 40
+    XAUTH = 41
+    CHARSET = 42
+    TELNET_REMOTE_SERIAL_PORT_RSP = 43
+    COM_PORT_CONTROL_OPTION = 44
+    TELNET_SUPPRESS_LOCAL_ECHO = 45
+    TELNET_START_TLS = 46
+    KERMIT = 47
+    SEND_URL = 48
+    FORWARD_X = 49
+    TELOPT_PRAGMA_LOGON = 138
+    TELOPT_SSPI_LOGON = 139
+    TELOPT_PRAGMA_HEARTBEAT = 140
+    EXTENDED_OPTIONS_LIST = 255
